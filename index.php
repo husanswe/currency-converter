@@ -1,3 +1,29 @@
+<?php
+    $result = ' ';
+    $amount = 1;
+    $from = "USD";
+    $to = "EUR";
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $amount = (float)$_POST['amount'];
+        $from = strtoupper($_POST['amount']);
+        $to = strtoupper($_POST['to']);
+        
+        $url = "https://open.er-api.com/v6/latest/$from";
+
+        $json = file_get_contents($url);
+        $data = json_decode($json, true);
+
+        if ($data && $data['result'] === 'success' && isset($data['rates'][$to])) {
+            $rate = $data['result'][$to];
+            $result = $amount * $rate;
+            $result = number_format($result, 2);
+        } else {
+            $result = 'Error: API failed or invalid currency';
+        }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,7 +42,7 @@
         <form class="container" action="" method="post">
             <div class="container py-5">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-6">
+                    <div class="col-lg-8 col-xl-6"> 
 
                         <div class="row g-3 align-items-center">
                             <!-- Left side: Amount + From Currency -->
