@@ -1,8 +1,8 @@
 <?php
-    $result = ' ';
+    $result = '';
     $amount = 1;
     $from = "USD";
-    $to = " ";
+    $to = "UZS";
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $amount = (float)$_POST['amount'];
