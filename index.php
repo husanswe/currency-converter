@@ -2,11 +2,11 @@
     $result = ' ';
     $amount = 1;
     $from = "USD";
-    $to = "EUR";
+    $to = " ";
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $amount = (float)$_POST['amount'];
-        $from = strtoupper($_POST['amount']);
+        $from = strtoupper($_POST['from']);
         $to = strtoupper($_POST['to']);
         
         $url = "https://open.er-api.com/v6/latest/$from";
@@ -15,7 +15,7 @@
         $data = json_decode($json, true);
 
         if ($data && $data['result'] === 'success' && isset($data['rates'][$to])) {
-            $rate = $data['result'][$to];
+            $rate = $data['rates'][$to];
             $result = $amount * $rate;
             $result = number_format($result, 2);
         } else {
@@ -50,7 +50,6 @@
                                 <input 
                                     type="number" 
                                     class="form-control form-control-lg text-center fw-bold" 
-                                    value="1" 
                                     min="0" 
                                     step="any" 
                                     id="amount" 
@@ -104,7 +103,7 @@
                                 <select class="form-select form-select-lg mt-2" id="toCurrency" name="to">
                                     <option value="USD">USD - United States Dollar</option>
                                     <option value="EUR">EUR - Euro</option>
-                                    <option value="UZS" selected>UZS - Uzbekistani Soum</option>
+                                    <option value="UZS">UZS - Uzbekistani Soum</option>
                                     <option value="GBP">GBP - British Pound</option>
                                     <option value="AUD">AUD - Australian Dollar</option>
                                     <option value="CAD">CAD - Canadian Dollar</option>
@@ -131,7 +130,7 @@
                         </div>
 
                         <div class="text-center mt-4">
-                            <button type="button" class="btn btn-primary btn-lg px-5" id="convertBtn">
+                            <button type="submit" class="btn btn-primary btn-lg px-5" id="convertBtn">
                                 Convert
                             </button>
                         </div>
