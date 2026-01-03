@@ -54,9 +54,11 @@
                                     min="0" 
                                     step="any" 
                                     id="amount" 
+                                    name="amount"
                                     placeholder="1"
+                                    value="<?= htmlspecialchars($amount) ?>"
                                 >
-                                <select class="form-select form-select-lg mt-2" id="fromCurrency">
+                                <select class="form-select form-select-lg mt-2" id="fromCurrency" name="from">
                                     <option value="USD" selected>USD - United States Dollar</option>
                                     <option value="EUR">EUR - Euro</option>
                                     <option value="UZS">UZS - Uzbekistani Soum</option>
@@ -94,11 +96,12 @@
                                 <input 
                                     type="text" 
                                     class="form-control form-control-lg text-center fw-bold" 
-                                    id="result" 
-                                    value="1.17" 
+                                    id="result"
+                                    value="<?= htmlspecialchars($result) ?>" 
+                                    value=" " 
                                     readonly
                                 >
-                                <select class="form-select form-select-lg mt-2" id="toCurrency">
+                                <select class="form-select form-select-lg mt-2" id="toCurrency" name="to">
                                     <option value="USD">USD - United States Dollar</option>
                                     <option value="EUR">EUR - Euro</option>
                                     <option value="UZS" selected>UZS - Uzbekistani Soum</option>
