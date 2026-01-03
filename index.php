@@ -58,30 +58,30 @@
                                     value="<?= htmlspecialchars($amount) ?>"
                                 >
                                 <select class="form-select form-select-lg mt-2" id="fromCurrency" name="from">
-                                    <option value="USD" selected>USD - United States Dollar</option>
-                                    <option value="EUR">EUR - Euro</option>
-                                    <option value="UZS">UZS - Uzbekistani Soum</option>
-                                    <option value="GBP">GBP - British Pound</option>
-                                    <option value="AUD">AUD - Australian Dollar</option>
-                                    <option value="CAD">CAD - Canadian Dollar</option>
-                                    <option value="CHF">CHF - Swiss Franc</option>
-                                    <option value="CNY">CNY - Chinese Yuan</option>
-                                    <option value="JPY">JPY - Japanese Yen</option>
-                                    <option value="INR">INR - Indian Rupee</option>
-                                    <option value="NZD">NZD - New Zealand Dollar</option>
-                                    <option value="SGD">SGD - Singapore Dollar</option>
-                                    <option value="HKD">HKD - Hong Kong Dollar</option>
-                                    <option value="KRW">KRW - South Korean Won</option>
-                                    <option value="MXN">MXN - Mexican Peso</option>
-                                    <option value="BRL">BRL - Brazilian Real</option>
-                                    <option value="ZAR">ZAR - South African Rand</option>
-                                    <option value="SEK">SEK - Swedish Krona</option>
-                                    <option value="NOK">NOK - Norwegian Krone</option>
-                                    <option value="DKK">DKK - Danish Krone</option>
-                                    <option value="PLN">PLN - Polish Zloty</option>
-                                    <option value="THB">THB - Thai Baht</option>
-                                    <option value="MYR">MYR - Malaysian Ringgit</option>
-                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="USD" <?= $from === 'USD' ? 'selected' : '' ?>>USD - United States Dollar</option>
+                                    <option value="EUR" <?= $from === 'EUR' ? 'selected' : '' ?>>EUR - Euro</option>
+                                    <option value="UZS" <?= $from === 'UZS' ? 'selected' : '' ?>>UZS - Uzbekistani Soum</option>
+                                    <option value="GBP" <?= $from === 'GBP' ? 'selected' : '' ?>>GBP - British Pound</option>
+                                    <option value="AUD" <?= $from === 'AUD' ? 'selected' : '' ?>>AUD - Australian Dollar</option>
+                                    <option value="CAD" <?= $from === 'CAD' ? 'selected' : '' ?>>CAD - Canadian Dollar</option>
+                                    <option value="CHF" <?= $from === 'CHF' ? 'selected' : '' ?>>CHF - Swiss Franc</option>
+                                    <option value="CNY" <?= $from === 'CNY' ? 'selected' : '' ?>>CNY - Chinese Yuan</option>
+                                    <option value="JPY" <?= $from === 'JPY' ? 'selected' : '' ?>>JPY - Japanese Yen</option>
+                                    <option value="INR" <?= $from === 'INR' ? 'selected' : '' ?>>INR - Indian Rupee</option>
+                                    <option value="NZD" <?= $from === 'NZD' ? 'selected' : '' ?>>NZD - New Zealand Dollar</option>
+                                    <option value="SGD" <?= $from === 'SGD' ? 'selected' : '' ?>>SGD - Singapore Dollar</option>
+                                    <option value="HKD" <?= $from === 'HKD' ? 'selected' : '' ?>>HKD - Hong Kong Dollar</option>
+                                    <option value="KRW" <?= $from === 'KRW' ? 'selected' : '' ?>>KRW - South Korean Won</option>
+                                    <option value="MXN" <?= $from === 'MXN' ? 'selected' : '' ?>>MXN - Mexican Peso</option>
+                                    <option value="BRL" <?= $from === 'BRL' ? 'selected' : '' ?>>BRL - Brazilian Real</option>
+                                    <option value="ZAR" <?= $from === 'ZAR' ? 'selected' : '' ?>>ZAR - South African Rand</option>
+                                    <option value="SEK" <?= $from === 'SEK' ? 'selected' : '' ?>>SEK - Swedish Krona</option>
+                                    <option value="NOK" <?= $from === 'NOK' ? 'selected' : '' ?>>NOK - Norwegian Krone</option>
+                                    <option value="DKK" <?= $from === 'DKK' ? 'selected' : '' ?>>DKK - Danish Krone</option>
+                                    <option value="PLN" <?= $from === 'PLN' ? 'selected' : '' ?>>PLN - Polish Zloty</option>
+                                    <option value="THB" <?= $from === 'THB' ? 'selected' : '' ?>>THB - Thai Baht</option>
+                                    <option value="MYR" <?= $from === 'MYR' ? 'selected' : '' ?>>MYR - Malaysian Ringgit</option>
+                                    <option value="TRY" <?= $from === 'TRY' ? 'selected' : '' ?>>TRY - Turkish Lira</option>
                                 </select>
                             </div>
 
@@ -97,34 +97,33 @@
                                     class="form-control form-control-lg text-center fw-bold" 
                                     id="result"
                                     value="<?= htmlspecialchars($result) ?>" 
-                                    value=" " 
                                     readonly
                                 >
                                 <select class="form-select form-select-lg mt-2" id="toCurrency" name="to">
-                                    <option value="USD">USD - United States Dollar</option>
-                                    <option value="EUR">EUR - Euro</option>
-                                    <option value="UZS">UZS - Uzbekistani Soum</option>
-                                    <option value="GBP">GBP - British Pound</option>
-                                    <option value="AUD">AUD - Australian Dollar</option>
-                                    <option value="CAD">CAD - Canadian Dollar</option>
-                                    <option value="CHF">CHF - Swiss Franc</option>
-                                    <option value="CNY">CNY - Chinese Yuan</option>
-                                    <option value="JPY">JPY - Japanese Yen</option>
-                                    <option value="INR">INR - Indian Rupee</option>
-                                    <option value="NZD">NZD - New Zealand Dollar</option>
-                                    <option value="SGD">SGD - Singapore Dollar</option>
-                                    <option value="HKD">HKD - Hong Kong Dollar</option>
-                                    <option value="KRW">KRW - South Korean Won</option>
-                                    <option value="MXN">MXN - Mexican Peso</option>
-                                    <option value="BRL">BRL - Brazilian Real</option>
-                                    <option value="ZAR">ZAR - South African Rand</option>
-                                    <option value="SEK">SEK - Swedish Krona</option>
-                                    <option value="NOK">NOK - Norwegian Krone</option>
-                                    <option value="DKK">DKK - Danish Krone</option>
-                                    <option value="PLN">PLN - Polish Zloty</option>
-                                    <option value="THB">THB - Thai Baht</option>
-                                    <option value="MYR">MYR - Malaysian Ringgit</option>
-                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="USD" <?= $to === 'USD' ? 'selected' : '' ?>>USD - United States Dollar</option>
+                                    <option value="EUR" <?= $to === 'EUR' ? 'selected' : '' ?>>EUR - Euro</option>
+                                    <option value="UZS" <?= $to === 'UZS' ? 'selected' : '' ?>>UZS - Uzbekistani Soum</option>
+                                    <option value="GBP" <?= $to === 'GBP' ? 'selected' : '' ?>>GBP - British Pound</option>
+                                    <option value="AUD" <?= $to === 'AUD' ? 'selected' : '' ?>>AUD - Australian Dollar</option>
+                                    <option value="CAD" <?= $to === 'CAD' ? 'selected' : '' ?>>CAD - Canadian Dollar</option>
+                                    <option value="CHF" <?= $to === 'CHF' ? 'selected' : '' ?>>CHF - Swiss Franc</option>
+                                    <option value="CNY" <?= $to === 'CNY' ? 'selected' : '' ?>>CNY - Chinese Yuan</option>
+                                    <option value="JPY" <?= $to === 'JPY' ? 'selected' : '' ?>>JPY - Japanese Yen</option>
+                                    <option value="INR" <?= $to === 'INR' ? 'selected' : '' ?>>INR - Indian Rupee</option>
+                                    <option value="SGD" <?= $to === 'SGD' ? 'selected' : '' ?>>SGD - Singapore Dollar</option>
+                                    <option value="NZD" <?= $to === 'NZD' ? 'selected' : '' ?>>NZD - New Zealand Dollar</option>
+                                    <option value="HKD" <?= $to === 'HKD' ? 'selected' : '' ?>>HKD - Hong Kong Dollar</option>
+                                    <option value="KRW" <?= $to === 'KRW' ? 'selected' : '' ?>>KRW - South Korean Won</option>
+                                    <option value="MXN" <?= $to === 'MXN' ? 'selected' : '' ?>>MXN - Mexican Peso</option>
+                                    <option value="BRL" <?= $to === 'BRL' ? 'selected' : '' ?>>BRL - Brazilian Real</option>
+                                    <option value="ZAR" <?= $to === 'ZAR' ? 'selected' : '' ?>>ZAR - South African Rand</option>
+                                    <option value="SEK" <?= $to === 'SEK' ? 'selected' : '' ?>>SEK - Swedish Krona</option>
+                                    <option value="NOK" <?= $to === 'NOK' ? 'selected' : '' ?>>NOK - Norwegian Krone</option>
+                                    <option value="DKK" <?= $to === 'DKK' ? 'selected' : '' ?>>DKK - Danish Krone</option>
+                                    <option value="PLN" <?= $to === 'PLN' ? 'selected' : '' ?>>PLN - Polish Zloty</option>
+                                    <option value="THB" <?= $to === 'THB' ? 'selected' : '' ?>>THB - Thai Baht</option>
+                                    <option value="MYR" <?= $to === 'MYR' ? 'selected' : '' ?>>MYR - Malaysian Ringgit</option>
+                                    <option value="TRY" <?= $to === 'TRY' ? 'selected' : '' ?>>TRY - Turkish Lira</option>
                                 </select>
                             </div>
                         </div>
